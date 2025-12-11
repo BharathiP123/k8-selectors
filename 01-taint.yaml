@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: taint-concep
+  namespace: roboshop
+  labels:
+   name: taint-concept
+   project: roboshop
+spec: 
+  replicas: 2
+  selector: 
+   matchLabels:
+    name: taint-concept
+    project: roboshop
+  template:
+    metadata: 
+      name: taint-concep
+      project: roboshop
+    spec: 
+      containers: 
+        - name: nginx
+          image: nginx
