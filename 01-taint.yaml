@@ -1,7 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata: 
-  name: taint-concept
   namespace: roboshop
   labels:
    name: taint-concept
@@ -14,11 +13,11 @@ spec:
     project: roboshop
   template:
     metadata: 
-      name: taint-concep
+      name: taint-concept
       project: roboshop
     labels:
-        name: taint-concept
-        project: roboshop
+      name: taint-concept
+      project: roboshop
     spec: 
       containers: 
         - name: nginx
